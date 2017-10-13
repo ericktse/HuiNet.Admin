@@ -1,0 +1,41 @@
+﻿@using HuiNet.Admin.Models.Home
+@model List<MenuModel>
+@{
+    Layout = null;
+}
+
+<aside class="Hui-aside">
+    <div class="menu_dropdown bk_2">
+        @foreach (var m in Model)
+            {
+                if (m.SubMenus != null && m.SubMenus.Count > 0)
+                {
+                <dl>
+                    <dt>
+                        @m.Title
+                        <i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i>
+                    </dt>
+                    <dd>
+                        <ul>
+                            @foreach (var subm in m.SubMenus)
+                            {
+                                <li>
+                                    <i class="Hui-iconfont">&#xe67e;</i>
+                                    <a data-href="@subm.Path" data-guid="@Guid.NewGuid().ToString()" data-title="@subm.Title" href="javascript:void(0)" onclick="return false;">@subm.Title</a>
+                                </li>
+                            }
+                        </ul>
+                    </dd>
+                </dl>
+            }
+            else
+            {
+                <dl>
+                    <dt>
+                        <a class="topmenu" data-href="@m.Path" data-guid="@Guid.NewGuid().ToString()" data-title="@m.Title" href="#" onclick="return false;">@m.Title</a>
+                    </dt>
+                </dl>
+            }
+        }
+    </div>
+</aside>

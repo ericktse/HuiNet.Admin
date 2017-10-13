@@ -1,0 +1,101 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>后台管理系统</title>
+    <script>
+        if (window != top) {
+            top.location.href = location.href;
+        }
+    </script>
+    <link href="~/Content/styles/login.css" rel="stylesheet" />
+    <link href="~/Content/hui/lib/layer/2.4/skin/layer.css" rel="stylesheet" />
+</head>
+<body>
+    <form method="post" id="loginform">
+        <div class="login border">
+            <div class="login-header">
+                <h2 class="title">后台管理系统</h2>
+            </div>
+
+            <div class="login-body">
+                <div class="group">
+                    <span class="icon icon-user"></span>
+                    <input type="text" name="UserName" id="username" placeholder="输入用户名" maxlength="50">
+                </div>
+                <div class="group">
+                    <span class="icon icon-lock"></span>
+                    <input type="password" name="Password" id="password" placeholder="输入密码" maxlength="50">
+                </div>
+                <div class="group">
+                    <span class="icon icon-code"></span>
+                    <input type="text" name="VidateCode" id="verify" placeholder="输入验证码" maxlength="20">
+                    <img src="@Url.Action("GetCheckCode")" class="imgcode">
+                </div>
+
+                <div class="login-button">
+                    <input type="button" class="" id="btnlogin" value="登录" />
+                </div>
+            </div>
+        </div>
+        <div class="copyright">©版权所有 广东网金控股股份有限公司</div>
+    </form>
+    <script src="~/Content/hui/lib/jquery/1.10.2/jquery.min.js"></script>
+    <script src="~/Content/hui/lib/layer/2.4/layer.js"></script>
+<script>
+    
+    $(function () {
+        document.onkeyup = function () {
+            if (event.keyCode == 13) {
+
+                if ($("div[id^='layui-layer'][type='dialog']").length) {
+                    layer.closeAll('dialog');
+                    return;
+                }
+
+                $('#btnlogin').click();
+                return;
+            }
+        }
+
+        $('.imgcode').on('click', function () {
+            changeImgCode();
+        });
+
+        function changeImgCode() {
+            $('.imgcode').attr('src', '@Url.Action("GetCheckCode")' + '?' + Math.random());
+        }
+
+        $('#btnlogin').on('click', function (e) {
+            $("#username").focus();
+
+            layer.load();
+            $.ajax({
+                url: '@Url.Action("Login")',
+                dataType: 'json',
+                type: 'post',
+                data: $('#loginform').serialize(),
+                success: function (response) {
+                    if (response.IsSuccess) {
+                        window.location.href = '@Url.Action("Index","Home")';
+                    } else {
+                        layer.closeAll('loading');
+                        changeImgCode();
+                        layer.alert(response.Message, { icon: 2 });
+                    }
+                },
+                error: function (errorMsg) {
+                    layer.closeAll('loading');
+                    layer.alert('系统错误' + errorMsg, { icon: 2 });
+                }
+            });
+        });
+
+        $("#username").focus();
+    });
+</script>
+</body>
+</html>

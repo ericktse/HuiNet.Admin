@@ -1,0 +1,363 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.Net.Compilers.2.3.1\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.2.3.1\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{741C8EA2-5231-4C4D-A798-18081526937C}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HuiNet.Admin</RootNamespace>
+    <AssemblyName>HuiNet.Admin</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime, Version=3.5.0.2, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="RestSharp, Version=105.2.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\RestSharp.105.2.3\lib\net45\RestSharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Webdiyer.MvcPager, Version=3.0.2015.802, Culture=neutral, PublicKeyToken=f6872c5a09aed72c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Webdiyer.MvcPager.3.0.1.1\lib\Webdiyer.MvcPager.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WebGrease, Version=1.6.5135.21930, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\ErrorController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Account\LoginModel.cs" />
+    <Compile Include="Models\Account\UserInfo.cs" />
+    <Compile Include="Models\ApiUrl.cs" />
+    <Compile Include="Models\Common\BaseResponse.cs" />
+    <Compile Include="Models\Common\PagedInfo.cs" />
+    <Compile Include="Models\Common\PagedOption.cs" />
+    <Compile Include="Models\Common\PageModel.cs" />
+    <Compile Include="Models\Home\MenuModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utils\AuthorizeProvider.cs" />
+    <Compile Include="Utils\Base64UrlEncoder.cs" />
+    <Compile Include="Utils\CheckLoginAttribute.cs" />
+    <Compile Include="Utils\ConfigReader.cs" />
+    <Compile Include="Utils\Csrf\CsrfConfig.cs" />
+    <Compile Include="Utils\Csrf\CsrfTokenExtension.cs" />
+    <Compile Include="Utils\Csrf\CsrfTokenWrapper.cs" />
+    <Compile Include="Utils\Csrf\CsrfWrapper.cs" />
+    <Compile Include="Utils\Csrf\ValidateCsrfTokenAttribute.cs" />
+    <Compile Include="Utils\EncryptHelper.cs" />
+    <Compile Include="Utils\HandleAjaxErrorAttribute.cs" />
+    <Compile Include="Utils\HttpClient.cs" />
+    <Compile Include="Utils\ImageCodeGenerator.cs" />
+    <Compile Include="Utils\ImageCodeHelper.cs" />
+    <Compile Include="Utils\Logger.cs" />
+    <Compile Include="Utils\PageFormExtendions.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\hui\lib\DD_belatedPNG_0.0.8a-min.js" />
+    <Content Include="Content\hui\lib\expressInstall.swf" />
+    <Content Include="Content\hui\lib\html5shiv.js" />
+    <Content Include="Content\hui\lib\Hui-iconfont\1.0.8\demo.html" />
+    <Content Include="Content\hui\lib\Hui-iconfont\1.0.8\iconfont.css" />
+    <Content Include="Content\hui\lib\Hui-iconfont\1.0.8\iconfont.min.css" />
+    <Content Include="Content\hui\lib\Hui-iconfont\1.0.8\iconfont.svg" />
+    <Content Include="Content\hui\lib\jqtreetable.js" />
+    <Content Include="Content\hui\lib\jquery.contextmenu\jquery.contextmenu.r2.js" />
+    <Content Include="Content\hui\lib\jquery.validation\1.14.0\additional-methods.js" />
+    <Content Include="Content\hui\lib\jquery.validation\1.14.0\jquery.validate.js" />
+    <Content Include="Content\hui\lib\jquery.validation\1.14.0\messages_zh.js" />
+    <Content Include="Content\hui\lib\jquery.validation\1.14.0\validate-methods.js" />
+    <Content Include="Content\hui\lib\jquery\1.10.2\jquery.js" />
+    <Content Include="Content\hui\lib\jquery\1.10.2\jquery.min.js" />
+    <Content Include="Content\hui\lib\jselect-1.0.js" />
+    <Content Include="Content\hui\lib\layer\2.4\layer.js" />
+    <Content Include="Content\hui\lib\layer\2.4\skin\default\icon-ext.png" />
+    <Content Include="Content\hui\lib\layer\2.4\skin\default\icon.png" />
+    <Content Include="Content\hui\lib\layer\2.4\skin\default\loading-0.gif" />
+    <Content Include="Content\hui\lib\layer\2.4\skin\default\loading-1.gif" />
+    <Content Include="Content\hui\lib\layer\2.4\skin\default\loading-2.gif" />
+    <Content Include="Content\hui\lib\layer\2.4\skin\layer.css" />
+    <Content Include="Content\hui\lib\My97DatePicker\4.8\calendar.js" />
+    <Content Include="Content\hui\lib\My97DatePicker\4.8\lang\en.js" />
+    <Content Include="Content\hui\lib\My97DatePicker\4.8\lang\zh-cn.js" />
+    <Content Include="Content\hui\lib\My97DatePicker\4.8\lang\zh-tw.js" />
+    <Content Include="Content\hui\lib\My97DatePicker\4.8\skin\datePicker.gif" />
+    <Content Include="Content\hui\lib\My97DatePicker\4.8\skin\default\datepicker.css" />
+    <Content Include="Content\hui\lib\My97DatePicker\4.8\skin\default\img.gif" />
+    <Content Include="Content\hui\lib\My97DatePicker\4.8\skin\twoer\datepicker-dev.css" />
+    <Content Include="Content\hui\lib\My97DatePicker\4.8\skin\twoer\datepicker.css" />
+    <Content Include="Content\hui\lib\My97DatePicker\4.8\skin\twoer\img.gif" />
+    <Content Include="Content\hui\lib\My97DatePicker\4.8\skin\twoer\img.png" />
+    <Content Include="Content\hui\lib\My97DatePicker\4.8\skin\WdatePicker.css" />
+    <Content Include="Content\hui\lib\My97DatePicker\4.8\skin\whyGreen\bg.jpg" />
+    <Content Include="Content\hui\lib\My97DatePicker\4.8\skin\whyGreen\datepicker.css" />
+    <Content Include="Content\hui\lib\My97DatePicker\4.8\skin\whyGreen\img.gif" />
+    <Content Include="Content\hui\lib\My97DatePicker\4.8\WdatePicker.js" />
+    <Content Include="Content\hui\lib\respond.min.js" />
+    <Content Include="Content\hui\lib\squid.js" />
+    <Content Include="Content\hui\lib\swfobject.js" />
+    <Content Include="Content\hui\static\h-ui.admin\css\H-ui.admin.css" />
+    <Content Include="Content\hui\static\h-ui.admin\css\H-ui.login.css" />
+    <Content Include="Content\hui\static\h-ui.admin\css\style.css" />
+    <Content Include="Content\hui\static\h-ui.admin\images\acrossTab\acrossTab-2.png" />
+    <Content Include="Content\hui\static\h-ui.admin\images\loading-0.gif" />
+    <Content Include="Content\hui\static\h-ui.admin\images\loading.gif" />
+    <Content Include="Content\hui\static\h-ui.admin\js\H-ui.admin.js" />
+    <Content Include="Content\hui\static\h-ui\css\H-ui.css" />
+    <Content Include="Content\hui\static\h-ui\css\H-ui.ie.css" />
+    <Content Include="Content\hui\static\h-ui\css\H-ui.reset.css" />
+    <Content Include="Content\hui\static\h-ui\images\acrossTab\acrossTab-bg.png" />
+    <Content Include="Content\hui\static\h-ui\images\acrossTab\acrossTab-close.png" />
+    <Content Include="Content\hui\static\h-ui\images\acrossTab\acrossTab.png" />
+    <Content Include="Content\hui\static\h-ui\images\dataTable\sort_asc.png" />
+    <Content Include="Content\hui\static\h-ui\images\dataTable\sort_both.png" />
+    <Content Include="Content\hui\static\h-ui\images\dataTable\sort_desc.png" />
+    <Content Include="Content\hui\static\h-ui\images\dropDown\icon-jt.png" />
+    <Content Include="Content\hui\static\h-ui\images\Hui-tags\empty.png" />
+    <Content Include="Content\hui\static\h-ui\images\iCheck\aero%402x.png" />
+    <Content Include="Content\hui\static\h-ui\images\iCheck\aero.png" />
+    <Content Include="Content\hui\static\h-ui\images\iCheck\blue%402x.png" />
+    <Content Include="Content\hui\static\h-ui\images\iCheck\blue.png" />
+    <Content Include="Content\hui\static\h-ui\images\iCheck\green%402x.png" />
+    <Content Include="Content\hui\static\h-ui\images\iCheck\green.png" />
+    <Content Include="Content\hui\static\h-ui\images\iCheck\grey%402x.png" />
+    <Content Include="Content\hui\static\h-ui\images\iCheck\grey.png" />
+    <Content Include="Content\hui\static\h-ui\images\iCheck\minimal%402x.png" />
+    <Content Include="Content\hui\static\h-ui\images\iCheck\minimal.png" />
+    <Content Include="Content\hui\static\h-ui\images\iCheck\orange%402x.png" />
+    <Content Include="Content\hui\static\h-ui\images\iCheck\orange.png" />
+    <Content Include="Content\hui\static\h-ui\images\iCheck\pink%402x.png" />
+    <Content Include="Content\hui\static\h-ui\images\iCheck\pink.png" />
+    <Content Include="Content\hui\static\h-ui\images\iCheck\purple%402x.png" />
+    <Content Include="Content\hui\static\h-ui\images\iCheck\purple.png" />
+    <Content Include="Content\hui\static\h-ui\images\iCheck\red%402x.png" />
+    <Content Include="Content\hui\static\h-ui\images\iCheck\red.png" />
+    <Content Include="Content\hui\static\h-ui\images\iCheck\yellow%402x.png" />
+    <Content Include="Content\hui\static\h-ui\images\iCheck\yellow.png" />
+    <Content Include="Content\hui\static\h-ui\images\iconpic-arrow.png" />
+    <Content Include="Content\hui\static\h-ui\images\jselect\iconpic-arrow-down2.png" />
+    <Content Include="Content\hui\static\h-ui\images\loading\loading-b.gif" />
+    <Content Include="Content\hui\static\h-ui\images\loading\loading-s.gif" />
+    <Content Include="Content\hui\static\h-ui\images\rollpic\unslider-arrow.png" />
+    <Content Include="Content\hui\static\h-ui\images\star\iconpic-star-S-default.png" />
+    <Content Include="Content\hui\static\h-ui\images\star\iconpic-star-S.png" />
+    <Content Include="Content\hui\static\h-ui\images\steps\step_arrow-active.png" />
+    <Content Include="Content\hui\static\h-ui\images\steps\step_arrow.png" />
+    <Content Include="Content\hui\static\h-ui\images\steps\step_bg-active.png" />
+    <Content Include="Content\hui\static\h-ui\images\steps\step_bg.png" />
+    <Content Include="Content\hui\static\h-ui\images\validform\iconpic-error.png" />
+    <Content Include="Content\hui\static\h-ui\images\validform\iconpic-right.png" />
+    <Content Include="Content\hui\static\h-ui\images\validform\iconpic-warning.png" />
+    <Content Include="Content\hui\static\h-ui\images\verticalTab\tabNav-active.png" />
+    <Content Include="Content\hui\static\h-ui\images\verticalTab\tabNav-hover.png" />
+    <Content Include="Content\hui\static\h-ui\images\verticalTab\tabNav.png" />
+    <Content Include="Content\hui\static\h-ui\images\verticalTab\tabNav_right-active.png" />
+    <Content Include="Content\hui\static\h-ui\images\verticalTab\tabNav_right-hover.png" />
+    <Content Include="Content\hui\static\h-ui\images\verticalTab\tabNav_right.png" />
+    <Content Include="Content\hui\static\h-ui\images\verticalTab\tab_bg.png" />
+    <Content Include="Content\hui\static\h-ui\js\H-ui.js" />
+    <Content Include="Content\images\login-icon.png" />
+    <Content Include="Content\images\logo.png" />
+    <Content Include="Content\scripts\common.js" />
+    <Content Include="Content\styles\login.css" />
+    <Content Include="Content\styles\Site.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\scripts\modernizr-2.8.3.js" />
+    <Content Include="robots.txt" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\Welcome.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Api.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\hui\lib\Hui-iconfont\1.0.8\iconfont.eot" />
+    <Content Include="Content\hui\lib\Hui-iconfont\1.0.8\iconfont.ttf" />
+    <Content Include="Content\hui\lib\Hui-iconfont\1.0.8\iconfont.woff" />
+    <Content Include="Content\hui\lib\jquery\1.10.2\jquery.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Account\Login.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\Forbidden.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\NotFound.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\_Header.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\_Footer.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\_Menu.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\_Pager.cshtml" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>36860</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:36860/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.2.3.1\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.2.3.1\build\Microsoft.Net.Compilers.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

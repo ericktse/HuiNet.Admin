@@ -1,0 +1,18 @@
+﻿<div class="welcome welcome-success">
+    <i class="Hui-iconfont Hui-iconfont-user"></i>
+    @{
+        string username = string.Empty;
+        if (ViewBag.LoginUser != null)
+        {
+            username = ViewBag.LoginUser.UserName;
+        }
+    }
+    @username 您好，
+    <br />
+    欢迎登录使用后台系统。
+</div>
+
+<div class="welcome welcome-info">
+    <h4>使用说明</h4>
+    <p>Hello world</p>
+</div>

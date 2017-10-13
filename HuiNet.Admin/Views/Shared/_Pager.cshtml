@@ -1,0 +1,22 @@
+﻿@using Webdiyer.WebControls.Mvc
+@using HuiNet.Admin.Models.Common
+@model PagedOption
+
+@{
+    var totalPageCount = Math.Ceiling(Model.Model.TotalItemCount / (double)Model.Model.PageSize);
+}
+
+<div class="page-list">
+    <div style="float: left;">共 @totalPageCount 页 @Model.Model.TotalItemCount 条记录，当前为第 @Model.Model.CurrentPageIndex 页</div>
+    @(Ajax.Pager(@Model.Model)
+          .Options(o => o.SetPageIndexParameterName(@Model.PageIndexParameterName)
+              .SetNumericPagerItemCount(5)
+              .AddHtmlAttribute("style", "float:right")
+              .SetContainerTagName("ul")
+              .SetCssClass("pagination")
+              .SetPagerItemTemplate("<li class=\"page-item\">{0}</li>")
+              .SetCurrentPagerItemTemplate("<li class=\"page-current\"><span>{0}</span></li>")
+              .SetDisabledPagerItemTemplate("<li class=\"page-disabled\"><span>{0}</span></li>"))
+          .AjaxOptions(a => a.SetUpdateTargetId(@Model.TargetId).SetHttpMethod("Post")
+              .EnablePartialLoading()))
+</div>

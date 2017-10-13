@@ -1,0 +1,209 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+/* 面包屑 开始 */
+.breadcrumb-btn {
+    line-height: 1.6em;
+    margin-top: 3px;
+    margin-right: 3px;
+}
+
+.breadcrumb-lastbtn {
+    line-height: 1.6em;
+    margin-top: 3px;
+}
+
+/* 面包屑 结束 */
+
+/* 分页列表 开始 */
+.page-list {
+    margin-top: 10px;
+}
+
+.page-disabled {
+    color: #777;
+}
+
+.page-current {
+    color: #ff0084;
+}
+
+.page-item > a {
+    color: #337ab7;
+}
+
+.page-btn {
+    text-decoration: none;
+}
+
+/* 分页列表 结束 */
+
+.title-span {
+    float: left;
+    width: 141px;
+    height: 32px;
+    margin-left: 100px;
+    text-indent: 1.2em;
+    color: #FFF;
+    font-size: 14px;
+    background-position: -231px -445px;
+}
+
+/*数据列表样式*/
+.table-of-x {
+    overflow-x: auto;
+}
+
+/* 欢迎页样式 */
+
+.welcome {
+    position: relative;
+    padding: 8px 35px 8px 14px;
+    margin-bottom: 20px;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+    background-color: #fcf8e3;
+    border: 1px solid #fbeed5;
+}
+
+    .welcome h4 {
+        margin: 5px 0;
+    }
+
+    .welcome .Hui-iconfont {
+        line-height: 20px;
+        cursor: text;
+        color: #000;
+        opacity: .2;
+        _color: #666;
+    }
+
+.welcome-success {
+    color: #468847;
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+}
+
+    .welcome-success h4 {
+        color: #468847;
+    }
+
+
+.welcome-info {
+    color: #31708f;
+    background-color: #d9edf7;
+    border-color: #bce8f1;
+}
+
+    .welcome-info h4 {
+        color: #31708f;
+    }
+
+
+/* 自定义layer样式 */
+.layui-layer-title {
+    background-color: #efefef !important;
+    font-weight: bold;
+}
+
+
+/* 分页列表 开始 */
+.page-list {
+    margin-top: 10px;
+}
+
+ul.pagination {
+    display: block;
+    padding-bottom: 10px;
+}
+
+.page-disabled span {
+    color: #ccc;
+}
+
+.page-current span {
+    background: #337ab7;
+    color: #fff;
+}
+
+.page-item, .page-disabled, .page-current, .page-btn {
+    display: inline;
+}
+
+    .page-item a, .page-btn a, .page-disabled span, .page-current span {
+        margin: 0 2px;
+        float: left;
+        padding: 3px 8px;
+        border: 1px solid #ccc;
+        text-decoration: none;
+    }
+
+    .page-item:hover, .page-item:hover a {
+        background: #337ab7;
+        color: #fff;
+        text-decoration: none;
+    }
+
+
+/* 分页列表 结束 */
+
+
+/* 列表页 开始 */
+.table-of-x {
+    overflow-x: auto;
+    height: 100%;
+}
+
+.min-w-850 {
+    min-width: 850px;
+}
+
+.min-w-1050 {
+    min-width: 1050px;
+}
+
+.min-w-1300 {
+    min-width: 1300px;
+}
+
+.button-r {
+    margin-right: 10px;
+}
+
+.fast-button-r {
+    margin-right: 10px;
+}
+
+@media (min-width: 767px) {
+    .button-r {
+        float: right;
+    }
+}
+
+@media (min-width: 1050px) {
+    .fast-button-r {
+        float: right;
+    }
+}
+
+/* 列表页 结束 */

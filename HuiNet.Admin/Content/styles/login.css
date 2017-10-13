@@ -1,0 +1,134 @@
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    font-family: 'Helvetica Neue',Helvetica,'PingFang SC','Hiragino Sans GB','Microsoft YaHei',Arial,sans-serif;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.login {
+    width: 650px;
+    margin: 0 auto;
+    height: 400px;
+    position: absolute;
+    left: 50%;
+    margin-left: -325px;
+    top: 50%;
+    margin-top: -200px;
+    z-index: 3;
+}
+
+.border {
+    background: #fff;
+    -moz-box-shadow: 0 0 10px #d0d0d0;
+    -webkit-box-shadow: 0 0 10px #d0d0d0;
+    box-shadow: 0 0 10px #d0d0d0;
+}
+
+.login-header {
+    margin-bottom: 5px;
+}
+
+    .login-header h2 {
+        text-align: center;
+        font-size: 24px;
+        padding-top: 20px;
+        height: 65px;
+        line-height: 65px;
+    }
+
+    .login-header h1 {
+        text-align: center;
+        height: 100px;
+    }
+
+.login-body {
+}
+
+.group {
+    height: 50px;
+    line-height: 50px;
+    margin: 0 auto 10px;
+    width: 300px;
+    position: relative;
+}
+
+    .group input {
+        border: 1px solid #e8e8e8;
+        height: 48px;
+        line-height: 48px;
+        width: 238px;
+        border-radius: 5px;
+        padding-left: 60px;
+    }
+
+    .group span.icon {
+        position: absolute;
+        left: 10px;
+        top: 5px;
+        height: 40px;
+        width: 40px;
+        background: url(/Content/images/login-icon.png) no-repeat;
+    }
+
+    .group span.icon-user {
+        background-position: 5px 6px;
+    }
+
+    .group span.icon-lock {
+        background-position: 5px -36px;
+    }
+
+    .group span.icon-code {
+        background-position: 5px -78px;
+    }
+
+    .group img.imgcode {
+        width: 90px;
+        height: 35px;
+        position: absolute;
+        right: 10px;
+        top: 9px;
+        overflow: hidden;
+    }
+
+.login-button {
+    padding: 30px 0;
+    text-align: center;
+    margin-top: 10px;
+    overflow: hidden;
+}
+
+    .login-button input {
+        width: 300px;
+        height: 46px;
+        line-height: 46px;
+        font-size: 18px;
+        font-weight: 700;
+        color: #fff;
+        background: #0f88eb;
+        border-radius: 5px;
+        border: 0;
+        cursor: pointer;
+    }
+
+        .login-button input:hover {
+            background: #2f9df3;
+        }
+
+.copyright {
+    text-align: center;
+    color: #aaa;
+    position: absolute;
+    left: 0;
+    bottom: 15px;
+    width: 100%;
+    z-index: 3;
+}

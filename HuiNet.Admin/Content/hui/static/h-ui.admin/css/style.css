@@ -1,0 +1,193 @@
+﻿/* 全站默认开始 */
+
+@charset "utf-8";
+/* 默认 黑色 */
+/*全站默认字体颜色*/
+a {
+    color: #333;
+}
+
+    a:hover, a:focus, .maincolor, .maincolor a {
+        color: #06c;
+    }
+/* 全站默认结束 */
+
+
+/* 顶部导航开始 */
+
+.navbar {
+}
+
+.navbar-blue {
+    background: #fff;
+    border-bottom: 1px solid #148cf1;
+    -moz-box-shadow: 0 0 3px #333;
+    -webkit-box-shadow: 0 0 3px #333;
+    box-shadow: 0 0 3px #333;
+}
+
+
+.navbar-logo, .navbar-logo-m, .navbar-slogan, .navbar-userbar {
+    color: #fff;
+}
+    /*logo 及 用户信息文字颜色*/
+    .navbar-logo:hover, .navbar-logo-m:hover {
+        color: #fff;
+        text-decoration: none;
+    }
+
+.navbar-nav > ul > li, .navbar-nav > ul > li > a {
+    /*color: #000;*/
+}
+/*顶部导航文字颜色*/
+
+.navbar-userbar {
+    top: 5px;
+}
+
+    .navbar-userbar > ul > li, .navbar-userbar > ul > li > a {
+        /*color: #000;*/
+    }
+
+
+
+.navbar-wrapper {
+    /*height: 60px;*/
+}
+
+.navbar-logo {
+    height: 48px;
+}
+
+.container-fluid {
+    height: 60px;
+}
+
+/* 顶部导航结束 */
+
+
+/* 左侧导航菜单开始 */
+.Hui-aside {
+    border-right: 1px solid #ababab;
+    padding-top: 8px;
+    bottom: 35px;
+}
+
+    .Hui-aside .menu_dropdown dt {
+        /*color: #fff;*/
+        /*border-bottom: 1px solid #222;*/
+        font-weight: normal;
+    }
+
+        .Hui-aside .menu_dropdown dt a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .Hui-aside .menu_dropdown dt:hover {
+        }
+
+        .Hui-aside .menu_dropdown dt a.topmenu {
+            display: block;
+            width: 175px;
+        }
+
+            .Hui-aside .menu_dropdown dt a.topmenu:hover {
+                color: #c0ccda;
+            }
+
+        /*左侧二级导航菜单*/
+        .Hui-aside .menu_dropdown dt:hover {
+        }
+
+            .Hui-aside .menu_dropdown dt:hover [class^="icon-"] {
+                color: #5A98DE;
+            }
+
+    .Hui-aside .menu_dropdown li:hover {
+        /*background-color: #5A98DE;*/
+    }
+
+    .Hui-aside .menu_dropdown li a {
+        padding-left: 15px;
+        display: inline;
+    }
+
+        .Hui-aside .menu_dropdown li a:hover {
+        }
+
+    .Hui-aside .menu_dropdown li.current a, .menu_dropdown li.current a:hover {
+    }
+
+    .Hui-aside .menu_dropdown dt .Hui-iconfont {
+    }
+
+    .Hui-aside .menu_dropdown dt .menu_dropdown-arrow {
+    }
+
+.dislpayArrow a {
+    background: url(icon_arrow.png) no-repeat 0 0;
+}
+
+/* 左侧导航菜单结束 */
+
+/* 页脚开始 */
+#footer {
+    color: #FFF;
+    background: #5A98DE;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    z-index: 999;
+    height: 35px;
+    line-height: 35px;
+}
+/* 页脚结束 */
+
+/* 右侧Tab开始 */
+
+.Hui-article-box {
+    bottom: 35px;
+}
+
+.Hui-tabNav {
+    /*background-color: #dadada;*/
+}
+
+@media (max-width: 767px) {
+    .show_iframe {
+        -webkit-overflow-scrolling: touch;
+        overflow-y: hidden;
+    }
+}
+
+/* 右侧Tab结束 */
+
+/* 标签分页 */
+.tabBar {
+    border-bottom: 2px solid #5A98DE;
+}
+
+    .tabBar span.current {
+        background-color: #5A98DE;
+    }
+
+/* Load样式 开始*/
+
+.loading {
+    z-index: 2;
+}
+
+/* Load样式 结束*/
+
+/* 校验样式 开始 */
+label.error {
+    position: relative;
+    padding-left: 20px;
+    right: 0;
+    top: 0;
+}
+
+/* 校验样式 结束 */

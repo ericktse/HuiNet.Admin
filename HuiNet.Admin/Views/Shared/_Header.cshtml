@@ -1,0 +1,29 @@
+﻿
+<header class="navbar-wrapper">
+    <div class="navbar navbar-fixed-top navbar-blue ">
+
+        <nav class="nav navbar-nav">
+            <div class="logo">
+                <img src="~/Content/images/logo.png" alt="" class="navbar-logo">
+            </div>
+            <div class="topInfo">
+                <span>
+                    <a href="javascript:void(0);">
+                        @{
+                            string username = string.Empty;
+                            if (ViewBag.LoginUser != null)
+                            {
+                                username = ViewBag.LoginUser.UserName;
+                            }
+                        }
+                        @username
+                    </a>，欢迎您！
+                </span>
+            </div>
+            <div class="exit">
+                @Html.ActionLink("切换账户", "Logout", "Account") | @Html.ActionLink("退出", "Logout", "Account")
+            </div>
+        </nav>
+
+    </div>
+</header>

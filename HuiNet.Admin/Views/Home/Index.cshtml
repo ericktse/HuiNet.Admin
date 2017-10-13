@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <link rel="Bookmark" href="/favicon.ico">
+    <link rel="Shortcut Icon" href="/favicon.ico" />
+    <title>后台管理系统</title>
+
+    <link rel="stylesheet" type="text/css" href="~/Content/styles/Site.css" />
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="~/Content/hui/lib/html5shiv.js"></script>
+    <script type="text/javascript" src="~/Content/hui/lib/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="~/Content/hui/static/h-ui/css/H-ui.css" />
+    <link rel="stylesheet" type="text/css" href="~/Content/hui/static/h-ui.admin/css/H-ui.admin.css" />
+    <link rel="stylesheet" type="text/css" href="~/Content/hui/lib/Hui-iconfont/1.0.8/iconfont.css" />
+    <link rel="stylesheet" type="text/css" href="~/Content/hui/static/h-ui.admin/css/style.css" />
+    <!--[if IE 6]>
+    <script type="text/javascript" src="~/Content/hui/lib/DD_belatedPNG_0.0.8a-min.js" ></script>
+    <script>DD_belatedPNG.fix('*');</script>
+    <![endif]-->
+
+</head>
+<body>
+
+    @RenderPage("~/Views/Shared/_Header.cshtml")
+
+    @* 菜单 *@
+    @Html.Action("Menu")
+
+    @* 主界面 *@
+    <section class="Hui-article-box">
+        <div id="Hui-tabNav" class="Hui-tabNav hidden-xs">
+            <div class="Hui-tabNav-wp">
+                <ul id="min_title_list" class="acrossTab cl">
+                    <li class="active">
+                        <span id="welcome" title="欢迎页" data-href="Home/Welcome">欢迎页</span><em></em>
+                    </li>
+                </ul>
+            </div>
+            <div class="Hui-tabNav-more btn-group">
+                <a id="js-tabNav-prev" class="btn radius btn-default size-S" href="javascript:void(0);"><i class="Hui-iconfont Hui-iconfont-arrow2-left"></i></a><a id="js-tabNav-next" class="btn radius btn-default size-S" href="javascript:void(0);"><i class="Hui-iconfont Hui-iconfont-arrow2-right"></i></a>
+            </div>
+        </div>
+        <div id="iframe_box" class="Hui-article">
+            <div class="show_iframe">
+                <div style="display: none" class="loading"></div>
+                <iframe id="welcomeframe" scrolling="yes" frameborder="0" src="@Url.Action("Welcome","Home")"></iframe>
+            </div>
+        </div>
+    </section>
+
+    @* tab右键菜单 *@
+    <div class="contextMenu" id="Huiadminmenu">
+        <ul>
+            <li id="closethis">关闭当前 </li>
+            <li id="closeall">关闭全部 </li>
+        </ul>
+    </div>
+
+    @RenderPage("~/Views/Shared/_Footer.cshtml")
+
+    <script type="text/javascript" src="~/Content/hui/lib/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript" src="~/Content/hui/lib/layer/2.4/layer.js"></script>
+    <script type="text/javascript" src="~/Content/hui/static/h-ui/js/H-ui.js"></script>
+    <script type="text/javascript" src="~/Content/hui/static/h-ui.admin/js/H-ui.admin.js"></script>
+    <script type="text/javascript" src="~/Content/hui/lib/jquery.contextmenu/jquery.contextmenu.r2.js"></script>
+
+</body>
+</html>
+
+
+
